@@ -43,8 +43,14 @@ export default function ListTodosComponent()
 
     function updateTodo(id)
     {
-        console.log("Update Clicked "+id);
+        //console.log("Update Clicked "+id);
         navigate(`/todo/${id}`);
+    }
+
+    function addNewTodo()
+    {
+        console.log("Add Clicked ");
+        navigate(`/todo/-1`);
     }
 
     return (
@@ -73,6 +79,7 @@ export default function ListTodosComponent()
                     </tbody>
                 </table>
             </div>
+            <div className="btn btn-success m-5" onClick={addNewTodo}>Add New Todo</div>
         </div>
     );
 }
